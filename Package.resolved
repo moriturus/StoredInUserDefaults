@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "default",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/moriturus/Default.git",
+      "state" : {
+        "revision" : "e6ffe014f2787f0fd1cafcc6b9ecba5b06c00e38",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "storedin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/moriturus/StoredIn.git",
+      "state" : {
+        "revision" : "5586411f562f07feb2c67cc3dd42276b776ec2eb",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
