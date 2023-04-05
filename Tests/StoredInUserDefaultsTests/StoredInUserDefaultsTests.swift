@@ -57,6 +57,38 @@ final class StoredInUserDefaultsTests: XCTestCase {
         XCTAssertEqual(UserDefaults.standard.integer(forKey: "key"), 1)
     }
     
+    func testOnceStoredInUserDefaultsBoolValue() {
+        struct Foo {
+            @StoredInUserDefaults(key: "key", strategy: .once)
+            var value: Bool
+        }
+        
+        var foo = Foo()
+        XCTAssertEqual(foo.value, Bool.default)
+        
+        foo.value = true
+        XCTAssertEqual(foo.value, UserDefaults.standard.bool(forKey: "key"))
+        
+        foo.value = false
+        XCTAssertEqual(UserDefaults.standard.bool(forKey: "key"), true)
+    }
+    
+    func testOnceStoredInUserDefaultsBoolValueDefaultIsTrue() {
+        struct Foo {
+            @StoredInUserDefaults(key: "key", default: true, strategy: .once)
+            var value: Bool
+        }
+        
+        var foo = Foo()
+        XCTAssertEqual(foo.value, true)
+        
+        foo.value = true
+        XCTAssertEqual(foo.value, UserDefaults.standard.bool(forKey: "key"))
+        
+        foo.value = false
+        XCTAssertEqual(UserDefaults.standard.bool(forKey: "key"), true)
+    }
+    
     func testOnceStoredInUserDefaultsOptionalValue() {
         struct Foo {
             @StoredInUserDefaults(key: "key", strategy: .once)

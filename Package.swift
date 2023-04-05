@@ -12,8 +12,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/moriturus/StoredIn.git", .upToNextMajor(from: "1.0.0")),
-        .package(url: "https://github.com/moriturus/Default.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/moriturus/StoredIn.git", .upToNextMajor(from: "1.1.0")),
+        .package(url: "https://github.com/moriturus/Default.git", .upToNextMajor(from: "1.1.2")),
     ],
     targets: [
         .target(

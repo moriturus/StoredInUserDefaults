@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/moriturus/Default.git",
       "state" : {
-        "revision" : "e6ffe014f2787f0fd1cafcc6b9ecba5b06c00e38",
-        "version" : "1.1.1"
+        "revision" : "247998ef07081552397e8c192572bcda5071a517",
+        "version" : "1.1.2"
       }
     },
     {
